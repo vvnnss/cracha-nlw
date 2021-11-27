@@ -1,6 +1,5 @@
 const LinksSocialMedia = {
   github: 'vvnnss',
-  youtube: 'UCmuExkpLBlPeOyeRkXXyLlQ',
   facebook: 'vnnssa.a',
   instagram: 'desvanesense',
   twitter: 'vvnnssa'
@@ -24,10 +23,9 @@ function getGitHubProfileInfos() {
     .then(data => {
       userName.textContent = data.name
       userBio.textContent = data.bio
-      userLink.href = data.html
+      userLink.href = data.html_url
       UserImage.src = data.avatar_url
       userLogin.textContent = data.login
     })
-  then(data => response.json())
 }
 getGitHubProfileInfos()
