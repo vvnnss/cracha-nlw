@@ -1,5 +1,10 @@
-<html>
+
+<!DOCTYPE html>
+
+<html lang="PT_br">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanessa Araujo - DoWhile2021</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +19,11 @@
       <div class="container">
         <div class="avatar">
           <span>
-            <img src="images/build.svg" alt="Selo RocketSeat" />
+            <img
+              src="images/build.svg"
+              alt="Selo RocketSeat"
+              class="animation"
+            />
           </span>
           <img
             src="http://lorempixel.com/185/185/people/"
@@ -62,7 +71,14 @@
         </ul>
       </div>
     </main>
-
     <script src="main.js"></script>
+    <script type="text/javascript" src="animacao.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector('main'), {
+        max: 7,
+        speed: 300
+      })
+    </script>
   </body>
 </html>
+
