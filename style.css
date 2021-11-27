@@ -6,20 +6,31 @@ html,
 body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
+  background: radial-gradient(#ce56ec, #000000);
 
   height: 100%;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+.hole {
+  margin: auto;
+  margin-top: 0.8 rem;
+  height: 0.5 rem;
+  width: 5 rem;
+  border: none;
+  background-color: #202024;
+}
+
 body {
   display: grid;
   place-items: center;
 }
 
 main {
-  background: url(images/background.svg);
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -35,6 +46,22 @@ main {
   margin: 11.5rem auto 0;
 
   position: relative;
+}
+
+.animation {
+  animation: loading 15s linear infinite;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning {
+  animation: loading 10s linear infinite;
 }
 
 .avatar span {
@@ -83,3 +110,101 @@ ul {
 
   justify-content: center;
 }
+
+ul {
+  margin-top: 2rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+li img {
+  border-radius: 0.5rem;
+}
+
+li:hover {
+  transform: scale(1.1);
+  border-bottom: solid 0.1rem #e91fba;
+  border-left: solid 0.1rem #b14ae0;
+  border-radius: 0.5rem;
+}
+
+/* @media_________________________________________________________  */
+
+@media screen and (max-width: 428px) {
+  .ticket,
+  .hole {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .avatar {
+    margin-top: 51%;
+  }
+
+  li {
+    margin-top: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .avatar {
+    margin-top: 30%;
+  }
+
+  li {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  .ticket {
+    height: 25%;
+  }
+}
+
+@media screen and (width: 810px) {
+  .ticket {
+    height: 26.3%;
+  }
+}
+
+@media screen and (width: 1024px) {
+  .ticket {
+    height: 31.2%;
+  }
+}
+
+@media screen and (width: 800px) {
+  .ticket {
+    height: 30%;
+  }
+}
+
+@media screen and (width: 1440px) {
+  .ticket {
+    height: 21.5%;
+  }
+}
+
+@media screen and (width: 1280px) {
+  .ticket {
+    height: 18%;
+  }
+}
+
+@media screen and (height: 950px) {
+  .ticket {
+    height: 22.9%;
+  }
+}
+
